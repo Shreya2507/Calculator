@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define your beans here 
+    <bean id="addService"  class="org.ncu.Calculator.AdditionService"></bean>
+   	<bean id="subService"  class="org.ncu.Calculator.SubtractionService"></bean>
+	<bean id="multService" class="org.ncu.Calculator.MultiplicationService"></bean>
+	<bean id="divService"  class="org.ncu.Calculator.DivisionService"></bean>
+	-->
+	<!-- CONSTRUCTOR INJECTION
+	<bean id="calc"  class="org.ncu.Calculator.Calculator">
+		<constructor-arg ref = "addService"></constructor-arg>
+		<constructor-arg ref = "subService"></constructor-arg>
+		<constructor-arg ref = "multService"></constructor-arg>
+		<constructor-arg ref = "divService"></constructor-arg>
+	</bean>
+	-->
+	
+	<!-- SETTER INJECTION -->
+<!-- 	<bean id="calc"  class="org.ncu.Calculator.Calculator">
+		<property name="Add"  ref = "addService"></property>
+		<property name="Sub"  ref = "subService"></property>
+		<property name="Mult" ref = "multService"></property>
+		<property name="Div"  ref = "divService"></property>
+	</bean> -->
+	
+	
+	<!-- Enable component scan -->
+    <context:component-scan base-package="org.ncu.Calculator"></context:component-scan>
+    
+    
+</beans>
